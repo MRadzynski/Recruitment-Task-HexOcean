@@ -9,7 +9,7 @@ import validateAndSubmit from '../../utils/validateAndSubmit';
 
 let FoodForm = (props) => {
   const { type, handleSubmit, submitSucceeded, submitFailed } = props;
-  console.log(type);
+
   return (
     <div className="container">
       <form
