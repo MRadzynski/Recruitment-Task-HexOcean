@@ -1,7 +1,12 @@
-import './App.css';
+import React from 'react';
+import FoodForm from './pages/FoodForm/FoodForm';
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <FoodForm />
+    </>
+  );
 }
 
 export default App;
