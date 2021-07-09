@@ -1,6 +1,6 @@
 .container {
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@
 
 .foodForm {
   width: 80vw;
-  height: 90vh;
+  height: calc(var(--vh, 1vh) * 90px);
   display: flex;
   flex-direction: column;
   align-items: stretch;
