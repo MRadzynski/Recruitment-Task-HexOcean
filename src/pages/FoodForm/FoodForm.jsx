@@ -7,6 +7,8 @@ import SelectField from '../../components/FormSelect/FormSelect';
 
 import validateAndSubmit from '../../utils/validateAndSubmit';
 
+import './FoodForm.styles.css';
+
 let FoodForm = (props) => {
   const { type, handleSubmit, submitSucceeded, submitFailed } = props;
 

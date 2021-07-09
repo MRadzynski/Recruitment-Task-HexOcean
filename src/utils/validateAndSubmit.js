@@ -10,7 +10,7 @@ const validateAndSubmit = (values) => {
     throw new SubmissionError(errors);
   } else {
     return submit(transformedData).then((data) => {
-      if (!data.hasOwnProperty('id')) {
+      if (!data?.hasOwnProperty('id')) {
         throw new SubmissionError({ ...data });
       }
     });

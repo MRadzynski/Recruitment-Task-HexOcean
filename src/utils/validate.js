@@ -83,10 +83,11 @@ const validate = (values) => {
     isError = true;
   }
 
-  // if (type === '') {
-  //   errors.type = 'Required*';
-  //   isError = true;
-  // }
+  // Manual check for the valid dish type field, because server's response is too long for good looking UI
+  if (type === '') {
+    errors.type = 'Required*';
+    isError = true;
+  }
 
   transformedData = { ...transformedData, name, preparation_time, type };
 
