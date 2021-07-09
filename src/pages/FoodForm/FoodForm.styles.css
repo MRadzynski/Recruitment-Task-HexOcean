@@ -1,0 +1,468 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../assets/pizzaBackground.jpg');
+  background-size: cover;
+}
+
+.foodForm {
+  width: 80vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  color: white;
+  background-color: #424242d2;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+}
+
+.section {
+  width: 90%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+}
+
+.foodForm .section:first-of-type {
+  margin-bottom: -3rem;
+}
+
+.fieldGroup {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0.5rem;
+  font-size: 1rem;
+  background-color: #373737;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.input {
+  width: 30vw;
+  padding: 0.5rem;
+  border: 0;
+  border-bottom: 1px solid white;
+  outline: 0;
+  color: white;
+  background-color: transparent;
+  font-size: 1rem;
+  text-align: center;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important;
+  background-clip: content-box !important;
+  transition: background-color 5000s;
+}
+
+select:hover {
+  background-color: #424242;
+}
+
+option {
+  padding: 0.2rem 0.4rem;
+  border-bottom: 1px solid #424242;
+  color: #424242;
+  background-color: #ddd;
+  font-size: 1rem;
+}
+
+.button {
+  width: 30vw;
+  height: 3rem;
+  position: relative;
+  top: 0;
+  margin: 0 auto;
+  border: 0;
+  color: white;
+  background-color: #ff1744;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: ease-out 0.25s;
+}
+
+.button:hover {
+  box-shadow: inset 30vw 0 0 0 #b71c1c;
+}
+
+.inputError {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  bottom: -1.2rem;
+  color: #f50057;
+  font-size: 0.8rem;
+}
+
+.message {
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  bottom: 8rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05rem;
+}
+
+.successMessage {
+  color: #4caf50;
+}
+
+.errorMessage {
+  color: #f50057;
+}
+
+button:focus,
+input[type='button']:focus {
+  outline: none;
+}
+
+@media (min-width: 20rem) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .fieldGroup {
+    padding: 1rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  .input {
+    width: 25vw;
+    padding: 0.2rem 0;
+    font-size: 0.8rem;
+  }
+
+  .button {
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .error {
+    bottom: -0.8rem;
+    font-size: 0.6rem;
+  }
+
+  .message {
+    bottom: 4.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .fieldGroup {
+    padding: 1.5rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .input {
+    width: 30vw;
+    font-size: 1rem;
+  }
+
+  .button {
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .error {
+    bottom: -1rem;
+    font-size: 0.8rem;
+  }
+
+  .message {
+    bottom: 5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .title {
+    margin-top: 1rem;
+    font-size: 3rem;
+  }
+
+  .fieldGroup {
+    padding: 2rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  .input {
+    width: 20vw;
+    font-size: 1.5rem;
+  }
+
+  .section {
+    gap: 1.5rem;
+  }
+
+  .button {
+    height: 3rem;
+    font-size: 1.6rem;
+  }
+
+  .error {
+    bottom: -1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .message {
+    bottom: 6rem;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 64rem) and (orientation: landscape) {
+  .foodForm {
+    width: 60vw;
+  }
+
+  .title {
+    margin-top: 0;
+    font-size: 2.5rem;
+  }
+
+  .fieldGroup {
+    padding: 1.4rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .input {
+    font-size: 1.2rem;
+  }
+
+  .section {
+    gap: 1rem;
+  }
+
+  .error {
+    bottom: -1.3rem;
+    font-size: 0.9rem;
+  }
+
+  .message {
+    bottom: 5.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 64rem) and (orientation: portrait) {
+  .title {
+    margin-top: 2rem;
+    font-size: 4rem;
+  }
+
+  .fieldGroup {
+    padding: 2rem 1.5rem;
+    font-size: 2rem;
+  }
+
+  .input {
+    font-size: 2rem;
+  }
+
+  .section {
+    gap: 3rem;
+  }
+
+  .button {
+    height: 4rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .error {
+    bottom: -1.7rem;
+    font-size: 1.2rem;
+  }
+
+  .message {
+    bottom: 9rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 90rem) and (orientation: landscape) {
+  .foodForm {
+    width: 60vw;
+  }
+  .title {
+    margin-top: 0.5rem;
+    font-size: 4rem;
+  }
+
+  .fieldGroup {
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  .input {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    gap: 1.5rem;
+  }
+
+  .button {
+    height: 4rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .error {
+    bottom: -1.3rem;
+    font-size: 1rem;
+  }
+
+  .message {
+    bottom: 7rem;
+    font-size: 2rem;
+  }
+
+}
+
+@media (min-width: 120rem) {
+  .foodForm {
+    width: 40vw;
+  }
+
+  .fieldGroup {
+    padding: 1.5rem;
+  }
+
+  .input {
+    width: 10vw;
+  }
+
+  .button {
+    width: 25vw;
+  }
+
+  .button:hover {
+    box-shadow: inset 25vw 0 0 0 #b71c1c;
+  }
+}
+
+@media (min-width: 160rem) {
+  .foodForm {
+    width: 30vw;
+  }
+
+  .input {
+    width: 7vw;
+  }
+
+  .button {
+    width: 20vw;
+  }
+
+  .button:hover {
+    box-shadow: inset 20vw 0 0 0 #b71c1c;
+  }
+}
+
+@media (min-width: 160rem) and (min-height: 90rem) {
+  .foodForm {
+    width: 40vw;
+  }
+
+  .title {
+    margin-top: 2rem;
+    font-size: 6rem;
+  }
+
+  .fieldGroup {
+    padding: 3rem;
+    font-size: 2rem;
+  }
+
+  .input {
+    width: 10vw;
+    font-size: 2rem;
+  }
+
+  .button {
+    height: 6rem;
+  }
+
+  .error {
+    bottom: -2rem;
+    font-size: 1.5rem;
+  }
+
+  .message {
+    bottom: 9.5rem;
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 240rem) {
+  .title {
+    margin-top: 4rem;
+    font-size: 8rem;
+  }
+
+  .fieldGroup {
+    padding: 4rem;
+    font-size: 3rem;
+  }
+
+  .input {
+    width: 10vw;
+    font-size: 3rem;
+  }
+
+  .button {
+    height: 7rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+
+  .error {
+    bottom: -2.8rem;
+    font-size: 2.2rem;
+  }
+
+  .message {
+    bottom: 13.5rem;
+    font-size: 4.5rem;
+  }
+}
