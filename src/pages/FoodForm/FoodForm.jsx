@@ -115,7 +115,7 @@ let FoodForm = (props) => {
           {submitSucceeded
             ? 'Data sent successfully '
             : submitFailed
-            ? 'Failed to sent data'
+            ? 'Failed to send data'
             : ''}
         </span>
         <button className="button" type="submit">
